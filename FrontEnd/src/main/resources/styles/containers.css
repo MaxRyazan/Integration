@@ -2,7 +2,6 @@
     margin-top: 7%;
     background: white;
     width: 99%;
-    border: 1px solid yellow;
     padding: 0;
 }
 
@@ -11,7 +10,6 @@
     width: 50%;
 }
 .oneShopContainer{
-    border: 2px solid blue;
     margin-bottom: 50px;
     padding: 0;
 
@@ -25,13 +23,11 @@
 .btnLeft {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 8%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #555;
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -42,10 +38,8 @@
     right: 0;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #555;
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -54,13 +48,12 @@
 .imagesContainer{
     display: flex;
     margin-left: 25px;
-    border: 1px solid orange;
     margin-bottom: 50px;
-    width: 50%;
+    width: 53.65%;
+    position: relative;
 }
 .inline{
     display: inline-flex;
-    border: 1px solid black;
     width: 100%;
     padding: 0;
     margin: 0;

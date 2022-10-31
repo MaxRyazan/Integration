@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Locale;
 
 @Entity
 @NoArgsConstructor
@@ -29,6 +30,8 @@ public class FlowerShop {
 
     private Grade grade;
 
+    private String imagePath;
+
     public FlowerShop(String shopTitle, String location, LocalTime openTime,
                       LocalTime closingTime, List<Reviews> reviews) {
         this.shopTitle = shopTitle;
@@ -37,5 +40,6 @@ public class FlowerShop {
         this.closingTime = closingTime;
         this.reviews = reviews;
         this.grade = Grade.NEUTRAL;
+        this.imagePath = shopTitle.toLowerCase().replace(" ","")+".png";
     }
 }

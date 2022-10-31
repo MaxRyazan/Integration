@@ -32,7 +32,9 @@ function printShops(object){
                     <h2>Время закрытия: ${obj.closingTime}</h2>
                 </div>
                 <div class="imagesContainer">
-                    <h1>${obj.shopTitle}</h1>
+                    <a href="#" class="previous round btnLeft">&#8249;</a>
+                    <a href="#" class="next round btnRight">&#8250;</a>
+                    <img src="${'../images/'+obj.imagePath}" alt="picture" class="img">
                 </div>
             </div>    
             `

@@ -1,3 +1,15 @@
 color{
     color: #ffdc10;
 }
+h1{
+    font-size: 26px;
+    color: darkgreen;
+    font-family: Bahnschrift, serif;
+}
+h2{
+    font-size: 18px;
+}
+.img{
+    height: 200px;
+    border: 1px solid green;
+}

@@ -1,0 +1,19 @@
+.containerInlineLeft{
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 7%;
+    background: white;
+    width: 75%;
+}
+.containerInlineRight{
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 7%;
+    background: white;
+    width: 23%;
+    margin-left: 10px;
+}
+.containerInlineMain{
+    display: inline-flex;
+    width: 99%;
+}

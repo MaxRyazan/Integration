@@ -34,7 +34,7 @@ function printShops(object){
                 <div class="imagesContainer">
                     <a href="#" class="previous round btnLeft">&#8249;</a>
                     <a href="#" class="next round btnRight">&#8250;</a>
-                    <img src="${'../images/'+obj.imagePath}" alt="picture" class="img">
+                    <div class="sliderOuterContainer"> ${obj.imagePath.map(image => `<img src="../images/${image}" alt="1" class="img">`).join("")}</div>
                 </div>
             </div>    
             `
@@ -42,6 +42,10 @@ function printShops(object){
     }
 )
 }
+
+
+
+
 
 window.addEventListener('resize', () => {
     let mainWindow = document.querySelector('.containerInlineMain')

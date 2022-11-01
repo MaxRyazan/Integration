@@ -30,7 +30,8 @@ public class FlowerShop {
 
     private Grade grade;
 
-    private String imagePath;
+    @ElementCollection
+    private List<String> imagePath;
 
     public FlowerShop(String shopTitle, String location, LocalTime openTime,
                       LocalTime closingTime, List<Reviews> reviews) {
@@ -40,6 +41,9 @@ public class FlowerShop {
         this.closingTime = closingTime;
         this.reviews = reviews;
         this.grade = Grade.NEUTRAL;
-        this.imagePath = shopTitle.toLowerCase().replace(" ","")+".png";
+        this.imagePath = List.of(shopTitle.toLowerCase().replace(" ","")+"1.png",
+                shopTitle.toLowerCase().replace(" ","")+"2.png",
+                shopTitle.toLowerCase().replace(" ","")+"3.png",
+                shopTitle.toLowerCase().replace(" ","")+"4.png");
     }
 }

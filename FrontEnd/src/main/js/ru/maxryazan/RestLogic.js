@@ -20,32 +20,34 @@ function rebuildGrade(grade){
 }
 
 function printShops(object){
+    let count = 1;
     object.forEach( (obj) => {
         document.querySelector('.containerInlineLeft').insertAdjacentHTML('afterbegin',
-            `
+    `
             <div class="inline">
                 <div class="oneShopContainer">
                     <h1>${obj.shopTitle}</h1>
                     <h2>Адрес: ${obj.location}</h2>
                     <h2>Оценка:<color class="star"> ${rebuildGrade(obj.grade)}</color></h2>
-                    <h2>Время открытия: ${obj.openTime}</h2>
-                    <h2>Время закрытия: ${obj.closingTime}</h2>
-                </div>
-                <div class="imagesContainer">
-                    <a href="#" class="previous round btnLeft">&#8249;</a>
-                    <a href="#" class="next round btnRight">&#8250;</a>
-                    <div class="sliderOuterContainer"> ${obj.imagePath.map(image => `<img src="../images/${image}" alt="1" class="img">`).join("")}</div>
+                    <h2>Время открытия: ${obj.openTime.slice(0, 5)}</h2>
+                    <h2>Время закрытия: ${obj.closingTime.slice(0, 5)}</h2>
                 </div>
             </div>    
+       `)
+
+        let item = "id" + count;
+        count++
+        document.querySelector('.containerInlineRight').insertAdjacentHTML('afterbegin',
             `
-        )
-    }
-)
+                <div class="test">
+                    <div class="sliderOuterContainer" id=${item}> 
+                        ${obj.imagePath.map(image => `<img src="../images/${image}" alt="img" class="img">`).join("")}
+                     </div>    
+                              
+                </div>
+                `)
+            })
 }
-
-
-
-
 
 window.addEventListener('resize', () => {
     let mainWindow = document.querySelector('.containerInlineMain')
@@ -58,8 +60,22 @@ window.addEventListener('resize', () => {
 })
 
 
+document.querySelector('.containerInlineRight').addEventListener('mouseover', function(){
+    let count = 0;
+    let width =  document.querySelector('.sliderOuterContainer').offsetWidth;
+    let array = document.querySelectorAll('.sliderOuterContainer')
+
+
+    for(let i = 1; i < array.length+1; i++) {
+        document.getElementById("id" + i).addEventListener('click', function () {
+            document.getElementById("id" + i).style.transform = 'translate(-' + count* width + 'px';
+            count++
+        })
+    }
+});
 
 
 
+// 2click - 4     3click - 3  4click - 2   1click - **
 // "http://localhost:8080/flowers/api/v1/{title}"
 // "http://localhost:8080/flowers/api/v1/flower_shops"

@@ -10,13 +10,22 @@ a:hover {
 }
 
 .previous {
-    background-color: lightgreen;
+    background-color: lightgray;
     color: black;
 }
 
 .next {
-    background-color: lightgreen;
+    background-color: lightgray;
     color: black;
+}
+
+.previous:hover{
+    background-color: lightgreen;
+    color: red;
+}
+.next:hover{
+    background-color: lightgreen;
+    color: red;
 }
 
 .round {

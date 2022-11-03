@@ -18,6 +18,7 @@ function rebuildGrade(grade){
 let count = 1;
 function printShops(object){
     object.forEach( (obj) => {
+        let length = obj.imagePath.length
         document.querySelector('.containerInlineMain').insertAdjacentHTML('afterbegin',
     `
             <div class="inline">
@@ -36,16 +37,16 @@ function printShops(object){
                     </div>    
                 </div>    
             </div>
-            <input type="button" value="next" onclick="relocation(document.getElementById('${obj.shopTitle.replace(" ", "")+count}'))">       
+            <input type="button" value="next" onclick="relocation(document.getElementById('${obj.shopTitle.replace(" ", "")+count}'), ${length})">       
            `)
     })
 }
 
-function relocation(element) {
+function relocation(element, length) {
     let width =  document.querySelector('.img').clientWidth;
     element.style.transform = 'translate(-'+ width * count+'px)'
     count++
-    if(count > 3) {
+    if(count === length) {
         count=0
     }
 

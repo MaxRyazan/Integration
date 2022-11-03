@@ -15,7 +15,7 @@ function rebuildGrade(grade){
         default : return '&#9733; &#9733; &#9733;'
     }
 }
-
+let count = 1;
 function printShops(object){
     object.forEach( (obj) => {
         document.querySelector('.containerInlineMain').insertAdjacentHTML('afterbegin',
@@ -30,15 +30,26 @@ function printShops(object){
                     <h2>Время открытия: ${obj.openTime.slice(0, 5)}</h2>
                     <h2>Время закрытия: ${obj.closingTime.slice(0, 5)}</h2>
                 </div>    
-                <div class="inline2"> 
-                    ${obj.imagePath.map(image => `<img src="../images/${image}" alt="" class="img">`).join("")}
-                </div>           
+                <div class="sliderLine">    
+                    <div class="inline2" id="${obj.shopTitle.replace(" ", "")+count}">    
+                        ${obj.imagePath.map(image => `<img src="../images/${image}"  alt="" class="img">`).join("")}
+                    </div>    
+                </div>    
             </div>
+            <input type="button" value="next" onclick="relocation(document.getElementById('${obj.shopTitle.replace(" ", "")+count}'))">       
            `)
     })
 }
 
+function relocation(element) {
+    let width =  document.querySelector('.img').clientWidth;
+    element.style.transform = 'translate(-'+ width * count+'px)'
+    count++
+    if(count > 3) {
+        count=0
+    }
 
+}
 
 window.addEventListener('resize', () => {
     let mainWindow = document.querySelector('.containerInlineMain')

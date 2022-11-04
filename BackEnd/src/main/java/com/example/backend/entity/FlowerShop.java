@@ -43,7 +43,6 @@ public class FlowerShop {
         this.grade = Grade.NEUTRAL;
         this.imagePath = List.of(shopTitle.toLowerCase().replace(" ","")+"1.png",
                 shopTitle.toLowerCase().replace(" ","")+"2.png",
-                shopTitle.toLowerCase().replace(" ","")+"3.png",
-                shopTitle.toLowerCase().replace(" ","")+"4.png");
+                shopTitle.toLowerCase().replace(" ","")+"3.png");
     }
 }

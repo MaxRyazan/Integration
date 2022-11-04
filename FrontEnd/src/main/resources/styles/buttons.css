@@ -8,26 +8,21 @@ a:hover {
     background-color: #ddd;
     color: black;
 }
-
-.previous {
-    background-color: lightgray;
-    color: black;
+.btn{
+    font-weight: bold;
+    color: darkgreen;
+    font-family: Bahnschrift, serif;
+    border: none;
+    font-size: 18px;
+    background-color: inherit;
 }
-
-.next {
-    background-color: lightgray;
-    color: black;
+.btn:hover{
+    color: lightgreen;
+    transform: scale(1.1);
 }
+.searchButton{
+    background-color: inherit;
+    border: 1px solid black;
+    border-left: 0;
 
-.previous:hover{
-    background-color: lightgreen;
-    color: red;
-}
-.next:hover{
-    background-color: lightgreen;
-    color: red;
-}
-
-.round {
-    border-radius: 50%;
 }

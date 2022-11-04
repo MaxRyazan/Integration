@@ -13,3 +13,11 @@ h2{
     height: auto;
     width: 100%;
 }
+.searchInput{
+    height: 24px;
+    border: 1px solid black;
+    border-right: 0;
+}
+.searchImage:hover{
+    transform: scale(1.15);
+}

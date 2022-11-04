@@ -1,15 +1,13 @@
 
 .containerInlineMain{
-    width: 60%;
     overflow: hidden;
 }
-.inline{
+.inlineShops{
     display: inline-flex;
     width: 100%;
     height: auto;
     padding: 0;
     margin-bottom: 50px;
-
 }
 .inline2{
     display: inline-flex;
@@ -24,4 +22,9 @@
 .sliderLine{
     overflow: hidden;
     margin-left: 50px;
+    position: relative;
+
+}
+.hide{
+    display: none;
 }

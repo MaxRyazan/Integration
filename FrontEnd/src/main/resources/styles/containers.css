@@ -1,6 +1,11 @@
-
+.containerForAll{
+}
 .containerInlineMain{
     overflow: hidden;
+    width: 60%;
+}
+.inlineSearch{
+    display: inline-flex;
 }
 .inlineShops{
     display: inline-flex;
@@ -13,18 +18,117 @@
     display: inline-flex;
     height: 100%;
     padding: 0;
-    width: 400px;
 }
 .title{
     height: auto;
     min-width: 200px;
 }
 .sliderLine{
+    width: 400px;
     overflow: hidden;
     margin-left: 50px;
-    position: relative;
-
 }
 .hide{
     display: none;
+}
+
+@media screen and (max-width: 991px){
+    .title{
+        height: auto;
+        min-width: 100px;
+    }
+    .containerInlineMain{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1300px){
+    .searchInput{
+        width: 350px;
+        font-size: 25px;
+        padding-bottom: 8px;
+        padding-top: 6px;
+    }
+    .inlineSearch{
+        height: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .searchInput{
+        width: 400px;
+        font-size: 30px;
+        padding-bottom: 13px;
+        padding-top: 11px;
+    }
+    .inlineSearch{
+        height: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+
+@media screen and (min-width: 1900px){
+    .title{
+        height: auto;
+        width: 500px;
+    }
+    .title h1{
+        font-size: 55px;
+    }
+    .title h2{
+        font-size: 35px;
+    }
+    .title input {
+        font-size: 30px;
+    }
+    .searchInput{
+        width: 500px;
+        font-size: 35px;
+        padding-bottom: 12px;
+        padding-top: 11px;
+    }
+    .inlineSearch{
+        height: 50px;
+        margin-bottom: 50px;
+    }
+    .sliderLine{
+        width: 700px;
+    }
+    .img{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 2900px){
+    .title{
+        height: auto;
+        width: 500px;
+    }
+    .title h1{
+        font-size: 55px;
+    }
+    .title h2{
+        font-size: 35px;
+    }
+    .title input {
+        font-size: 30px;
+    }
+    .searchInput{
+        width: 500px;
+        font-size: 35px;
+        padding-bottom: 12px;
+        padding-top: 10px;
+    }
+    .inlineSearch{
+        height: 50px;
+        margin-bottom: 50px;
+    }
+    .sliderLine{
+        width: 700px;
+    }
+    .img{
+        width: 700px;
+    }
 }
